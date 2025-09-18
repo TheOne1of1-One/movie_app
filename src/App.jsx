@@ -4,7 +4,7 @@ import Spinner from './components/spinner.jsx';
 import MovieCard from './components/MovieCard.jsx';
 import MovieModal from './components/MovieModal.jsx'; 
 import { useDebounce } from 'react-use';
-import { getTrendingMovies, updateSearchCOunt } from './appwrite.js';
+import { getTrendingMovies, updateSearchCOunt } from './appwrite.js';;
 
 const API_BASE_URL = 'https://api.themoviedb.org/3';
 const API_KEY = import.meta.env.VITE_TMBD_API_KEY;
@@ -25,7 +25,7 @@ const App = () => {
   const [debouncedSearchTerm, setDebouncedSearchTerm] = useState('');
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
-  const [selectedMovie, setSelectedMovie] = useState(null);
+  const [selectedMovie, setSelectedMovie] = useState(null); 
 
   // Debounce search term input to limit API calls
   useDebounce(() => setDebouncedSearchTerm(searchTerm), 500, [searchTerm]);
@@ -95,10 +95,10 @@ const App = () => {
 
  return (
     <main>
-      <div className="pattern rounded-2xl" />
+      <div className="pattern" />
       <div className="wrapper">
         <header>
-          <img src="./movie-poster.jpg" alt="Movie Poster" />
+          <img src = "./movie-poster.jpg" alt = "Hero Banner" />
           <h1>Find <span className="text-gradient"> Movies and Animes</span> Here!</h1>
           <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         </header>
@@ -133,7 +133,6 @@ const App = () => {
             </ul>
           )}
 
-          
           <div className="flex justify-center gap-4 mt-6">
             <button
               className="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50"
@@ -155,11 +154,9 @@ const App = () => {
           </div>
         </section>
       </div>
-
       {selectedMovie && (
         <MovieModal movie={selectedMovie} onClose={() => setSelectedMovie(null)} />
       )}
-
     </main>
   )
 }

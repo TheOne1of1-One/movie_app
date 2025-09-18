@@ -17,7 +17,7 @@
 
   --breakpoint-xs: 480px;
 
-  --background-image-hero-pattern: url("/movie-poster.jpg");
+  --background-image-hero-pattern: url("./movie-poster.jpg");
 }
 
 @layer base {
