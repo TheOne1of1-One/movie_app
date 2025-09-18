@@ -1,5 +1,4 @@
 import React from 'react'
-import { Analytics } from "@vercel/analytics/next"
 
 const Spinner = () => {
   return (
@@ -15,7 +14,7 @@ const Spinner = () => {
           fill="currentFill"/>
       </svg>
       <span className="sr-only">Loading...</span>
-      <Analytics />
+
     </div>
   )
 }
