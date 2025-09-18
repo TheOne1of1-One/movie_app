@@ -17,3 +17,7 @@ Users can browse movies, view details, and watch trailers inside a modal.
 - TMDB API
 - Appwrite (Database + Queries)
 - Vercel (Deployment)
+
+# Link
+
+movie-app-xgvn.vercel.app
