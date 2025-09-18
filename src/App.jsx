@@ -98,7 +98,7 @@ const App = () => {
       <div className="pattern" />
       <div className="wrapper">
         <header>
-              <img src={`${import.meta.env.BASE_URL}movie-poster.jpg`} alt="Hero Banner" />
+              <img src="./movie-poster.jpg" alt="Hero Banner" />
               <h1>
                 Find <span className="text-gradient"> Movies and Animes</span> Here!
               </h1>
