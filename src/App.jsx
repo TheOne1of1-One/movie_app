@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import Search from './components/Search.jsx';
-import Spinner from './components/Spinner.jsx';
-import MovieCard from './components/MovieCard.jsx';
-import MovieModal from './components/MovieModal.jsx'; 
+import Search from './components/search.jsx';
+import Spinner from './components/spinner.jsx';
+import MovieCard from './components/moviecard.jsx';
+import MovieModal from './components/moviemodal.jsx'; 
 import { useDebounce } from 'react-use';
 import { getTrendingMovies, updateSearchCOunt } from './appwrite.js';
 
