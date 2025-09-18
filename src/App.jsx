@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import Search from './components/search.jsx'
-import Spinner from './components/spinner.jsx';
+import React, { useEffect, useState } from 'react';
+import Search from './components/Search.jsx';
+import Spinner from './components/Spinner.jsx';
 import MovieCard from './components/MovieCard.jsx';
 import MovieModal from './components/MovieModal.jsx'; 
 import { useDebounce } from 'react-use';
-import { getTrendingMovies, updateSearchCOunt } from './appwrite.js';;
+import { getTrendingMovies, updateSearchCOunt } from './appwrite.js';
 
 const API_BASE_URL = 'https://api.themoviedb.org/3';
 const API_KEY = import.meta.env.VITE_TMBD_API_KEY;
@@ -98,10 +98,12 @@ const App = () => {
       <div className="pattern" />
       <div className="wrapper">
         <header>
-          <img src = "./movie-poster.jpg" alt = "Hero Banner" />
-          <h1>Find <span className="text-gradient"> Movies and Animes</span> Here!</h1>
-          <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-        </header>
+              <img src={`${import.meta.env.BASE_URL}movie-poster.jpg`} alt="Hero Banner" />
+              <h1>
+                Find <span className="text-gradient"> Movies and Animes</span> Here!
+              </h1>
+              <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+            </header>
 
         {trendingMovies.length > 0 && (
           <section className="trending">
